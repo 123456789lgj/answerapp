@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/ll"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/leftLinearLayout"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:id="@+id/rightLinearLayout"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+         <!--   <com.lgj.myflowdemo.MyFlowLayout
+                android:layout_width="match_parent"
+                android:id="@+id/myFlowLayout"
+                android:layout_height="wrap_content"/>
+            <com.lgj.myflowdemo.MyFlowLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:id="@+id/myFlowLayout2"
+                android:layout_height="wrap_content"/>-->
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

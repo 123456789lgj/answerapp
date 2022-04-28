@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_head" />
+
+    <TextView
+        android:id="@+id/tv_subject_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="你将要激活的科目是"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="手机版本激活后绑定手机,无法更换,请在常用手机激活"
+        android:textColor="@color/text_press"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/et_activate_code"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shap_login_btn_normal"
+            android:gravity="center"
+            android:hint="请输入激活码"
+            android:textColor="#333333"
+            android:textColorHint="@color/text_hint_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_activate"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/et_activate_code"
+            android:background="@drawable/shap_login_btn_press"
+            android:gravity="center"
+            android:text="激活"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_activation_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="未激活"
+        android:textColor="#f52020"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_jump"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/shap_oval_activate_bg"
+        android:text="3s后自动跳转到首页"
+        android:textColor="#333333"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_activation_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="点击下方链接寻求帮助！"
+        android:textColor="#333333"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ll_activation_help"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/service" />
+
+        <TextView
+            android:id="@+id/help_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:textColor="#333333"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="如有疑问,请联系客服处理" />
+
+    </LinearLayout>
+
+</LinearLayout>

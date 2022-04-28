@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2699fb</color>
+    <color name="colorPrimaryDark">#2699fb</color>
+    <color name="colorAccent">#2699fb</color>
+    <color name="btn_gray_normal">#aaaaaa</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_normal">#A5FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="fragment_my_textcolor">#8B8B8B</color>
+
+    <!--文字的按压颜色-->
+    <color name="text_press">#2699fb</color>
+    <color name="mid_blue">#BCE0FD</color>
+    <color name="min_blue">#f1f9ff</color>
+
+    <color name="text_hint_color">#A2666666</color>
+    <color name="textC">#666666</color>
+
+
+    <color name="gb_gray">#f0f0f0</color>
+    <color name="main_gray">#F8F8F8</color>
+
+    <color name="subject_text_normal">#666666</color>
+</resources>

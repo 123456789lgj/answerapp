@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">好尚通题库</string>
+    <string name="second">秒</string>
+    <string name="has_send_sms">验证码已发出</string>
+    <string name="has_send_sus">激活成功</string>
+    <string name="send_sms_error">激活失败</string>
+</resources>
