@@ -13,7 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivationActivity"></activity>
+        <activity android:name=".AnswerActivity"></activity>
+        <activity android:name=".ChapterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".QuestionBankCenter" />
+        <activity android:name=".ActivationActivity" />
         <activity android:name=".UserServiceActivity" />
         <activity
             android:name=".RegisterActivity"
@@ -24,11 +33,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/lgjTheme"
             android:windowSoftInputMode="stateHidden|adjustPan">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".MainActivity"

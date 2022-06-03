@@ -37,8 +37,8 @@ public class RetrofitUtil {
                         boolean isLogin = PrefUtils.getBoolean(MyApplication.mApplicationContext, "isLogin", false);
                         if(isLogin){
                             String token = PrefUtils.getString(MyApplication.mApplicationContext, "token", "");
-                            builder.addHeader("Authorization","Bearer " + token);
-                            System.out.println("Bearer token : " + token);
+                            builder.addHeader("Authorization", "Bearer " + token);
+                            System.out.println("lgj Bearer token : " + token);
                         }
                         Request request = builder.build();
                         return chain.proceed(request);

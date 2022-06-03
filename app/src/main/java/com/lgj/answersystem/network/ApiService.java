@@ -2,6 +2,7 @@ package com.lgj.answersystem.network;
 
 import com.lgj.answersystem.bean.ActivationBean;
 import com.lgj.answersystem.bean.AllSubjectBean;
+import com.lgj.answersystem.bean.ChapterBean;
 import com.lgj.answersystem.bean.PlacardBean2;
 import com.lgj.answersystem.bean.SmsResponse;
 import com.lgj.answersystem.bean.UserLoginBean;
@@ -44,5 +45,10 @@ public interface ApiService {
     @Headers({"Content-type:application/json;charset=UTF-8"})
     Call<ActivationBean> useActivationCode(@Body RequestBody requestBod);
 
+
+    //根据大分类管理获取所有章节练习题库
+    @GET("/tmsBigCategory/all")
+    @Headers({"Content-type:application/json;charset=UTF-8"})
+    Call<ChapterBean> allChapter(@Query("subjectId") int subjectId);
 
 }

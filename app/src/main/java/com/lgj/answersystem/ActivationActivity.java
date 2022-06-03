@@ -41,10 +41,11 @@ public class ActivationActivity extends BaseActivity implements View.OnClickList
         if (intent != null) {
             mSubjectName = intent.getStringExtra("subjectName");
             mSubjectId = intent.getIntExtra("subjectId", -1);
+            System.out.println("lgj mSubjectId :" + mSubjectId);
             mSubjectText.setText(Html.fromHtml("你将要激活的科目是：<font color='#FF0000'>" + "<big>" + mSubjectName + "</big></font> "));
         }
         mBtnActivate.setOnClickListener(this);
-        mEtActivateCode.setText("ux768kqnv261");
+        mEtActivateCode.setText("x2c6zo91vand");
     }
 
     @Override
@@ -63,7 +64,8 @@ public class ActivationActivity extends BaseActivity implements View.OnClickList
             ToastUtils.showShort("请输入激活码");
             return;
         }
-        activateCode = "ux768kqnv261";
+        activateCode = "ux768kqnv261";// 轮机盖伦
+        activateCode = "x2c6zo91vand";//主推力装置
         HashMap<String, Object> param = new HashMap<>();
         param.put("subjectId", mSubjectId);
         param.put("activationCodeName", activateCode);
@@ -74,10 +76,11 @@ public class ActivationActivity extends BaseActivity implements View.OnClickList
                     public void onResponse(Call<ActivationBean> call, Response<ActivationBean> response) {
                         if (response.body() != null && response.body().getCode() == 1) {
                             ToastUtils.showShort(getString(R.string.has_send_sus));
-//                            ToastUtils.showShort(("科目id--->" + response.body().getSubjectId()) + response.body().getActivationCodeName());
-//                            SPUtils.getInstance().put("subjectId", response.body().getSubjectId());
-//                            SPUtils.getInstance().put("activationCode", response.body().getActivationCodeName());
-                        }else {
+                            Intent intent = new Intent(ActivationActivity.this, QuestionBankCenter.class);
+                            intent.putExtra("subjectId", mSubjectId);
+                            intent.putExtra("subjectName", mSubjectName);
+                            ActivationActivity.this.startActivity(intent);
+                        } else {
                             if (response.body() == null) {
                                 return;
                             }
