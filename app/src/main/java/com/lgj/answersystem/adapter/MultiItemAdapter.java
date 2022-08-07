@@ -1,17 +1,14 @@
 package com.lgj.answersystem.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.view.View;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
-import com.lgj.answersystem.AnswerActivity;
+import com.lgj.answersystem.answer.AnswerActivity;
 import com.lgj.answersystem.R;
 import com.lgj.answersystem.bean.BigBean;
-import com.lgj.answersystem.util.ActivityUtils;
 
 import java.util.List;
 

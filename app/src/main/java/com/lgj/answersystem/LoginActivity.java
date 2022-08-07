@@ -181,8 +181,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                                 ToastUtils.showShort("登录成功");
                                 PrefUtils.putBoolean(MyApplication.mApplicationContext, "isLogin", true);
                                 PrefUtils.putString(MyApplication.mApplicationContext, "token", response.body().getData().getToken());
-//                                ActivityUtils.startActivity(MainActivity.class,LoginActivity.this);
-                                ActivityUtils.startActivity(ChapterActivity.class,LoginActivity.this);
+                                ActivityUtils.startActivity(MainActivity.class,LoginActivity.this);
+//                                ActivityUtils.startActivity(ChapterActivity.class,LoginActivity.this);
                                 finish();
                             } else {
                                 ToastUtils.showShort(response.body().getMessage());

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lgj.myflowdemo.ClickableSlidingDrawer
+        android:id="@+id/ctlSlidingDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:content="@+id/content"
+        android:handle="@+id/handle">
+
+        <LinearLayout
+            android:id="@+id/handle"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Left"></Button>
+
+            <Button
+                android:id="@+id/ctlHandle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Handle"></Button>
+
+            <Button
+                android:id="@+id/btnRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Right"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Middle"></Button>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is the content"></TextView>
+        </LinearLayout>
+    </com.lgj.myflowdemo.ClickableSlidingDrawer>
+</LinearLayout>

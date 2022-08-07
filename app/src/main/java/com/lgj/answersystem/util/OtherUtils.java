@@ -92,4 +92,26 @@ public class OtherUtils {
     public static int getColor(int resId) {
         return MyApplication.mApplicationContext.getResources().getColor(resId);
     }
+
+    public static String indexTransformString(int index){
+        String str = "";
+        switch (index) {
+            case 0:
+                str = "A";
+                break;
+            case 1:
+                str = "B";
+                break;
+            case 2:
+                str = "C";
+                break;
+            case 3:
+                str = "D";
+                break;
+            case 4:
+                str = "E";
+                break;
+        }
+        return str;
+    }
 }

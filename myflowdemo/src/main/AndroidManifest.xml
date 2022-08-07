@@ -9,16 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecyclerViewTest">
+        <activity android:name=".TestLayoutLayout">
+
+
+        </activity>
+        <activity android:name=".SlidingDrawerTest">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RelativeLayoutActivity"></activity>
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".RecyclerViewTest"></activity>
+        <activity android:name=".RelativeLayoutActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

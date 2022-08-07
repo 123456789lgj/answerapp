@@ -39,9 +39,9 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.0.2"
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
 
-    implementation "androidx.recyclerview:recyclerview:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation 'androidx.cardview:cardview:1.0.0'
     // recyclerView 展示多级列表
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
-
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
 }

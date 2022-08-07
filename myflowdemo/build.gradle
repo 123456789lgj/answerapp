@@ -37,5 +37,7 @@ dependencies {
 
     implementation "androidx.recyclerview:recyclerview:1.0.0"
     implementation 'androidx.cardview:cardview:1.0.0'
+    //这个是多级列表使用
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
+
 }

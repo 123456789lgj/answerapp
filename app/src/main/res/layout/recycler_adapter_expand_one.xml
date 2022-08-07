@@ -19,7 +19,6 @@
         android:layout_toRightOf="@+id/iv"
         android:layout_marginLeft="10dp"
         android:textSize="18sp"
-        android:textColor="#8B8B8B"
         android:layout_centerVertical="true"
         android:text="222222222222" />
 

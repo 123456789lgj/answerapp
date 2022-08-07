@@ -16,6 +16,8 @@
 
     <color name="text_hint_color">#A2666666</color>
     <color name="textC">#666666</color>
+    <color name="right_text_color">#6DC9B4</color>
+    <color name="error_text_color">#F15352</color>
 
 
     <color name="gb_gray">#f0f0f0</color>

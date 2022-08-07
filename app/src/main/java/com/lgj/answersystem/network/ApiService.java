@@ -4,6 +4,7 @@ import com.lgj.answersystem.bean.ActivationBean;
 import com.lgj.answersystem.bean.AllSubjectBean;
 import com.lgj.answersystem.bean.ChapterBean;
 import com.lgj.answersystem.bean.PlacardBean2;
+import com.lgj.answersystem.bean.QuestionBean;
 import com.lgj.answersystem.bean.SmsResponse;
 import com.lgj.answersystem.bean.UserLoginBean;
 
@@ -50,5 +51,11 @@ public interface ApiService {
     @GET("/tmsBigCategory/all")
     @Headers({"Content-type:application/json;charset=UTF-8"})
     Call<ChapterBean> allChapter(@Query("subjectId") int subjectId);
+
+
+    //根据科目id获取所有题目
+    @GET("/tmsQuestion/all")
+    @Headers({"Content-type:application/json;charset=UTF-8"})
+    Call<QuestionBean> getQuestionList(@Query("subjectId") int subjectId, @Query("deviceId") String deviceId);
 
 }

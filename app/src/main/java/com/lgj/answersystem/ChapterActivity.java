@@ -34,15 +34,14 @@ public class ChapterActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chapter);
         mMultiItemRecyclerView = findViewById(R.id.multiItemRecyclerView);
-        Intent intent = getIntent();
-        if (intent != null) {
-            mSubjectId = intent.getIntExtra("subjectId", -1);
-            mSubjectName = intent.getStringExtra("subjectName");
+        if (mIntent != null) {
+            mSubjectId = mIntent.getIntExtra("subjectId", -1);
+            mSubjectName = mIntent.getStringExtra("subjectName");
         }
         mSubjectName = "主推力装置";
         mSubjectId = 15;
         findTitle(mSubjectName);
-        System.out.println("lgj mSubjectName :" + mSubjectName + " intent :" + intent);
+        System.out.println("lgj mSubjectName :" + mSubjectName + " mIntent :" + mIntent);
         getChatPterList();
     }
 
@@ -93,10 +92,11 @@ public class ChapterActivity extends BaseActivity {
                 bigBean.setBigCategoryName(bigCategoryName);
                 List<ChapterBean.DataBean.ChapterListBean.SmallListBean> smallList = chapterListBean.getSmallList();
                 for (int j = 0; j < smallList.size(); j++) {
-                    ChapterBean.DataBean.ChapterListBean.SmallListBean smallListBean = smallList.get(i);
+                    ChapterBean.DataBean.ChapterListBean.SmallListBean smallListBean = smallList.get(j);
                     BigBean.SmallBean smallBean = new BigBean.SmallBean();
                     smallBean.setId(smallListBean.getId());
                     smallBean.setSmallCategoryName(smallListBean.getSmallCategoryName());
+                    System.out.println("lgj : j :" + j + " smallListBean :" + smallListBean.getSmallCategoryName());
                     // 这句代码是关键，这个可以有整个列表
                     bigBean.addSubItem(smallBean);
                 }

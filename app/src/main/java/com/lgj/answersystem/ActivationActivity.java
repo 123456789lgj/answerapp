@@ -33,14 +33,13 @@ public class ActivationActivity extends BaseActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activation);
         findTitle("科目激活");
-        Intent intent = getIntent();
         mSubjectText = findViewById(R.id.tv_subject_text);
         mBtnActivate = findViewById(R.id.tv_activate);
         mEtActivateCode = findViewById(R.id.et_activate_code);
         mSubjectText = findViewById(R.id.tv_subject_text);
-        if (intent != null) {
-            mSubjectName = intent.getStringExtra("subjectName");
-            mSubjectId = intent.getIntExtra("subjectId", -1);
+        if (mIntent != null) {
+            mSubjectName = mIntent.getStringExtra("subjectName");
+            mSubjectId = mIntent.getIntExtra("subjectId", -1);
             System.out.println("lgj mSubjectId :" + mSubjectId);
             mSubjectText.setText(Html.fromHtml("你将要激活的科目是：<font color='#FF0000'>" + "<big>" + mSubjectName + "</big></font> "));
         }

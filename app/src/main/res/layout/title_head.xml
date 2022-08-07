@@ -3,6 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="48dp"
     android:background="@color/text_press">
+    <!--    android:gravity="center_vertical"
+    答题界面，做到沉浸式状态来的话，需要文字垂直居中
+     -->
 
     <ImageView
         android:id="@+id/backArrow"
@@ -17,7 +20,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:includeFontPadding="false"
         android:text="注册"
         android:textColor="@color/white"
         android:textSize="16sp"

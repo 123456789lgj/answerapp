@@ -25,7 +25,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = initView();
-        Log.i(this.getClass() + " lgj ", "onCreateView" + this + "view :" + view);
+        Log.i(this.getClass() + " lgj ", "onCreateView " + this + "view :" + view);
         return view;
     }
 

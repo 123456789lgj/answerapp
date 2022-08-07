@@ -1,14 +1,14 @@
-package com.lgj.answersystem;
+package com.lgj.myflowdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class AnswerActivity extends AppCompatActivity {
+public class TestLayoutLayout extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_answer);
+        setContentView(R.layout.activity_test_layout_layout);
     }
 }

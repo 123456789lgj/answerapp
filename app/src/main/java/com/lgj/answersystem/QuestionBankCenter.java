@@ -21,10 +21,9 @@ public class QuestionBankCenter extends BaseActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_bank_center);
-        Intent intent = getIntent();
-        if (intent != null) {
-            mSubjectId = intent.getIntExtra("subjectId", -1);
-            mSubjectName = intent.getStringExtra("subjectName");
+        if (mIntent != null) {
+            mSubjectId = mIntent.getIntExtra("subjectId", -1);
+            mSubjectName = mIntent.getStringExtra("subjectName");
             findTitle(mSubjectName);
         }
         mChapterTrain = findViewById(R.id.ll_chapter_train);
