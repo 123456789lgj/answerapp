@@ -10,7 +10,10 @@ import android.view.View;
 import androidx.appcompat.app.AlertDialog;
 
 import com.lgj.answersystem.ActivationActivity;
+import com.lgj.answersystem.ChapterActivity;
+import com.lgj.answersystem.QuestionBankCenter;
 import com.lgj.answersystem.R;
+import com.lgj.answersystem.answer.AnswerActivity;
 
 
 /**
@@ -38,7 +41,8 @@ public class ActivationSubjectsDialog implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnActivation:
-                Intent intent = new Intent(mContext, ActivationActivity.class);
+                Intent intent = new Intent(mContext, AnswerActivity.class);
+//                Intent intent = new Intent(mContext, ActivationActivity.class);
                 intent.putExtra("subjectId",mSubjectId);
                 intent.putExtra("subjectName",mSubjectName);
                 mContext.startActivity(intent);

@@ -56,6 +56,11 @@ public interface ApiService {
     //根据科目id获取所有题目
     @GET("/tmsQuestion/all")
     @Headers({"Content-type:application/json;charset=UTF-8"})
-    Call<QuestionBean> getQuestionList(@Query("subjectId") int subjectId, @Query("deviceId") String deviceId);
+    Call<QuestionBean> getQuestionList(@Query("subjectId") int subjectId, @Query("deviceId") String deviceId, @Query("smallCategoryId") int smallCategoryId);
 
+
+    //根据科目id获取所有题目
+    @GET("/tmsQuestion/all")
+    @Headers({"Content-type:application/json;charset=UTF-8"})
+    Call<QuestionBean> getQuestionList(@Query("subjectId") int subjectId, @Query("deviceId") String deviceId);
 }

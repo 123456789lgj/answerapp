@@ -10,9 +10,7 @@ import android.widget.SlidingDrawer;
 import androidx.annotation.NonNull;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.google.gson.Gson;
 import com.lgj.answersystem.BaseActivity;
-import com.lgj.answersystem.MyApplication;
 import com.lgj.answersystem.R;
 import com.lgj.answersystem.bean.QuestionBean;
 
@@ -40,7 +38,9 @@ public class AnswerActivity extends BaseActivity {
             mSubjectId = mIntent.getIntExtra("subjectId", -1);
             mSmallId = mIntent.getIntExtra("smallId", -1);
         }
-        mSubjectId = 15;// 打桩数据
+//        mSubjectId = 15;// 打桩数据
+        System.out.println(TAG + " mSubjectId :" + mSubjectId);
+        System.out.println(TAG + " mSmallId :" + mSmallId);
         setStatusBarDown();
         mSlidingDrawer = findViewById(R.id.slidingDrawer);
         mViewPager = findViewById(R.id.viewPager2);

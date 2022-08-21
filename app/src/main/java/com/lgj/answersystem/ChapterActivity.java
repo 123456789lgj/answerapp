@@ -38,8 +38,8 @@ public class ChapterActivity extends BaseActivity {
             mSubjectId = mIntent.getIntExtra("subjectId", -1);
             mSubjectName = mIntent.getStringExtra("subjectName");
         }
-        mSubjectName = "主推力装置";
-        mSubjectId = 15;
+//        mSubjectName = "主推力装置";
+//        mSubjectId = 15;
         findTitle(mSubjectName);
         System.out.println("lgj mSubjectName :" + mSubjectName + " mIntent :" + mIntent);
         getChatPterList();

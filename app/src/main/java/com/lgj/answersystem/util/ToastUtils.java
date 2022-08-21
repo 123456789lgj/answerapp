@@ -6,6 +6,7 @@ import com.lgj.answersystem.MyApplication;
 
 public class ToastUtils {
     public static void showShort(String msg) {
+        System.out.println("msg :" + msg);
         Toast.makeText(MyApplication.mApplicationContext, msg, Toast.LENGTH_SHORT).show();
     }
 

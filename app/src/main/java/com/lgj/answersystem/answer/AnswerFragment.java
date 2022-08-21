@@ -60,7 +60,6 @@ public class AnswerFragment extends BaseFragment implements IUpdateRightAndError
     @Override
     public View initView() {
         View view = View.inflate(getContext(), R.layout.answer_fragment, null);
-        mTvQuestionType = view.findViewById(R.id.tvQuestionType);
         mTvNumberPager = view.findViewById(R.id.tvNumberPager);
         mTvQuestionTitle = view.findViewById(R.id.tvQuestionTitle);
         mRecyclerViewOption = view.findViewById(R.id.recyclerViewOption);
@@ -86,6 +85,9 @@ public class AnswerFragment extends BaseFragment implements IUpdateRightAndError
         setQuestionType();
         // 题目
         String questionTitle = mDataBan.getQuestionTitle();
+        if (questionTitle.startsWith("[1-9]")) {
+
+        }
         mTvQuestionTitle.setText(mCurrentPosition + "、" + questionTitle);
         // 设置当前的到那一页了
         String content = "<font color=\"#2699fb\">" + mCurrentPosition + "</font>" + "/" + mTotalSize;

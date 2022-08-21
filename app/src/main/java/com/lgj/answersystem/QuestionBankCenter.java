@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.lgj.answersystem.answer.AnswerActivity;
+
 public class QuestionBankCenter extends BaseActivity implements View.OnClickListener {
     private String mSubjectName;
     private int mSubjectId;
@@ -40,7 +42,8 @@ public class QuestionBankCenter extends BaseActivity implements View.OnClickList
         switch (v.getId()){
             // 章节练习
             case R.id.ll_chapter_train:
-                Intent intent = new Intent(this, ChapterActivity.class);
+                Intent intent = new Intent(this, AnswerActivity.class);
+//                Intent intent = new Intent(this, ChapterActivity.class);
                 intent.putExtra("subjectId",mSubjectId);
                 intent.putExtra("subjectName",mSubjectName);
                 startActivity(intent);

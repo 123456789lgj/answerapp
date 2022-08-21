@@ -1,6 +1,9 @@
 package com.lgj.answersystem.answer;
 
+import android.os.Build;
 import android.text.TextUtils;
+
+import androidx.annotation.RequiresApi;
 
 import com.google.gson.Gson;
 import com.lgj.answersystem.MyApplication;
@@ -12,10 +15,12 @@ import com.lgj.answersystem.util.PrefUtils;
 import com.lgj.answersystem.util.ToastUtils;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
 // 获取数据层，model层
 public class AnswerModel {
     public static String TAG = "lgj AnswerModel";
@@ -43,7 +48,7 @@ public class AnswerModel {
             if (!TextUtils.isEmpty(json)) {
                 QuestionBean questionBean = new Gson().fromJson(json, QuestionBean.class);
                 parseData(questionBean);
-            }else {
+            } else {
                 getTitleListData();
             }
 //             getTitleListData();
@@ -64,7 +69,9 @@ public class AnswerModel {
                         public void onResponse(Call<QuestionBean> call, Response<QuestionBean> response) {
                             mQuestionBankCompleteListener.dismissLoadingDialog();
                             System.out.println("lgj 访问网络时间 end Time : " + (System.currentTimeMillis() - startTime));
-                            if (response.body() != null && response.body().getCode() == 1) {
+                            if (response.body() != null && response.body().getCode() == 1
+                                    && response.body().getData() != null
+                                    && response.body().getData().size() != 0){
                                 Gson gson = new Gson();
                                 String jsonStr = gson.toJson(response.body());
                                 System.out.println("response jsonStr :" + jsonStr);
@@ -91,7 +98,12 @@ public class AnswerModel {
     private void parseData(QuestionBean questionBean) {
         if (questionBean != null && questionBean.getData() != null && questionBean.getData().size() > 0) {
             List<QuestionBean.DataBean> data = questionBean.getData();
+//            List<QuestionBean.DataBean> filterList = data.stream().filter(item -> item.getSmallCategoryId() == mSmallId).collect(Collectors.toList());
+//            System.out.println("lgj parseData filterList :" + filterList.size());
             mQuestionBankCompleteListener.onComplete(data);
+        } else {
+
+            PrefUtils.putString(MyApplication.mApplicationContext, mSubjectId + "_question_key", "");
         }
     }
 }
