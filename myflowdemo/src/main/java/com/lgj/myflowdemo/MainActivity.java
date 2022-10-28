@@ -9,9 +9,12 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         mRightLinearLayout = findViewById(R.id.rightLinearLayout);
         mLl = findViewById(R.id.ll);
         initData();
+        ImageView imageView = new ImageView(this);
+        Glide.with(this).load("").into(imageView);
 
         for (Map.Entry<String, List<String>> entry : mHashMap.entrySet()) {
             MyFlowLayout myFlowLayout = new MyFlowLayout(this);

@@ -1,3 +1,4 @@
+include ':lgjglide'
 include ':myflowdemo'
 include ':app'
 rootProject.name = "answersystem"
